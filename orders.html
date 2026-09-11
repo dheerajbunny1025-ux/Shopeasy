@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders - ShopEase</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="../index.html">
+                ShopEase
+            </a>
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for products..."
+            >
+
+            <button type="button" id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <nav class="navbar">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="orders.html" class="active">
+                My Orders
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="ai-mode.html">
+                AI Mode
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= ORDERS PAGE ================= -->
+
+    <main class="orders-page">
+
+        <div class="orders-container">
+
+            <!-- Page Header -->
+
+            <section class="orders-header">
+
+                <div>
+
+                    <h1>
+                        My Orders
+                    </h1>
+
+                    <p>
+                        Track and manage your orders
+                    </p>
+
+                </div>
+
+                <a
+                    href="products.html"
+                    class="continue-shopping-btn"
+                >
+                    Continue Shopping
+                </a>
+
+            </section>
+
+
+            <!-- ================= ORDER FILTERS ================= -->
+
+            <section class="order-filters">
+
+                <button
+                    type="button"
+                    class="order-filter active"
+                    data-status="all"
+                >
+                    All Orders
+                </button>
+
+                <button
+                    type="button"
+                    class="order-filter"
+                    data-status="ordered"
+                >
+                    Ordered
+                </button>
+
+                <button
+                    type="button"
+                    class="order-filter"
+                    data-status="shipped"
+                >
+                    Shipped
+                </button>
+
+                <button
+                    type="button"
+                    class="order-filter"
+                    data-status="delivered"
+                >
+                    Delivered
+                </button>
+
+                <button
+                    type="button"
+                    class="order-filter"
+                    data-status="cancelled"
+                >
+                    Cancelled
+                </button>
+
+            </section>
+
+
+            <!-- ================= ORDERS LIST ================= -->
+
+            <section
+                id="ordersContainer"
+                class="orders-list"
+            >
+
+
+                <!-- ================= ORDER 1 ================= -->
+
+                <article
+                    class="order-card"
+                    data-status="shipped"
+                >
+
+                    <!-- Order Header -->
+
+                    <div class="order-header">
+
+                        <div>
+
+                            <span class="order-label">
+                                Order ID
+                            </span>
+
+                            <strong>
+                                #SE10001
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="order-label">
+                                Order Date
+                            </span>
+
+                            <strong>
+                                10 Sep 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="order-label">
+                                Total Amount
+                            </span>
+
+                            <strong>
+                                ₹32,998
+                            </strong>
+
+                        </div>
+
+
+                        <span class="order-status shipped">
+                            Shipped
+                        </span>
+
+                    </div>
+
+
+                    <!-- Order Products -->
+
+                    <div class="order-products">
+
+
+                        <!-- Product -->
+
+                        <div class="ordered-product">
+
+                            <div class="ordered-product-image">
+                                📱
+                            </div>
+
+                            <div class="ordered-product-info">
+
+                                <h3>
+                                    Premium Smartphone
+                                </h3>
+
+                                <p>
+                                    Quantity: 1
+                                </p>
+
+                                <p>
+                                    Price: ₹29,999
+                                </p>
+
+                            </div>
+
+                            <a
+                                href="product-details.html"
+                                class="view-product-btn"
+                            >
+                                View Product
+                            </a>
+
+                        </div>
+
+
+                        <!-- Product -->
+
+                        <div class="ordered-product">
+
+                            <div class="ordered-product-image">
+                                🎧
+                            </div>
+
+                            <div class="ordered-product-info">
+
+                                <h3>
+                                    Wireless Headphones
+                                </h3>
+
+                                <p>
+                                    Quantity: 1
+                                </p>
+
+                                <p>
+                                    Price: ₹2,999
+                                </p>
+
+                            </div>
+
+                            <a
+                                href="product-details.html"
+                                class="view-product-btn"
+                            >
+                                View Product
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Order Tracking -->
+
+                    <div class="order-tracking">
+
+                        <div class="tracking-step completed">
+
+                            <div class="tracking-icon">
+                                ✓
+                            </div>
+
+                            <span>
+                                Ordered
+                            </span>
+
+                        </div>
+
+
+                        <div class="tracking-line completed"></div>
+
+
+                        <div class="tracking-step completed">
+
+                            <div class="tracking-icon">
+                                ✓
+                            </div>
+
+                            <span>
+                                Confirmed
+                            </span>
+
+                        </div>
+
+
+                        <div class="tracking-line completed"></div>
+
+
+                        <div class="tracking-step active">
+
+                            <div class="tracking-icon">
+                                🚚
+                            </div>
+
+                            <span>
+                                Shipped
+                            </span>
+
+                        </div>
+
+
+                        <div class="tracking-line"></div>
+
+
+                        <div class="tracking-step">
+
+                            <div class="tracking-icon">
+                                📦
+                            </div>
+
+                            <span>
+                                Delivered
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Order Footer -->
+
+                    <div class="order-footer">
+
+                        <p>
+                            Expected delivery:
+                            <strong>
+                                14 Sep 2026
+                            </strong>
+                        </p>
+
+                        <div class="order-actions">
+
+                            <button
+                                type="button"
+                                class="track-order-btn"
+                            >
+                                Track Order
+                            </button>
+
+                            <button
+                                type="button"
+                                class="cancel-order-btn"
+                            >
+                                Cancel Order
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= ORDER 2 ================= -->
+
+                <article
+                    class="order-card"
+                    data-status="delivered"
+                >
+
+                    <div class="order-header">
+
+                        <div>
+
+                            <span class="order-label">
+                                Order ID
+                            </span>
+
+                            <strong>
+                                #SE10000
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="order-label">
+                                Order Date
+                            </span>
+
+                            <strong>
+                                01 Sep 2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="order-label">
+                                Total Amount
+                            </span>
+
+                            <strong>
+                                ₹4,999
+                            </strong>
+
+                        </div>
+
+
+                        <span class="order-status delivered">
+                            Delivered
+                        </span>
+
+                    </div>
+
+
+                    <div class="order-products">
+
+                        <div class="ordered-product">
+
+                            <div class="ordered-product-image">
+                                ⌚
+                            </div>
+
+                            <div class="ordered-product-info">
+
+                                <h3>
+                                    Smart Watch
+                                </h3>
+
+                                <p>
+                                    Quantity: 1
+                                </p>
+
+                                <p>
+                                    Price: ₹4,999
+                                </p>
+
+                            </div>
+
+                            <a
+                                href="product-details.html"
+                                class="view-product-btn"
+                            >
+                                View Product
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-tracking">
+
+                        <div class="tracking-step completed">
+
+                            <div class="tracking-icon">
+                                ✓
+                            </div>
+
+                            <span>
+                                Ordered
+                            </span>
+
+                        </div>
+
+
+                        <div class="tracking-line completed"></div>
+
+
+                        <div class="tracking-step completed">
+
+                            <div class="tracking-icon">
+                                ✓
+                            </div>
+
+                            <span>
+                                Confirmed
+                            </span>
+
+                        </div>
+
+
+                        <div class="tracking-line completed"></div>
+
+
+                        <div class="tracking-step completed">
+
+                            <div class="tracking-icon">
+                                ✓
+                            </div>
+
+                            <span>
+                                Shipped
+                            </span>
+
+                        </div>
+
+
+                        <div class="tracking-line completed"></div>
+
+
+                        <div class="tracking-step completed">
+
+                            <div class="tracking-icon">
+                                ✓
+                            </div>
+
+                            <span>
+                                Delivered
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="order-footer">
+
+                        <p>
+                            Delivered on:
+                            <strong>
+                                06 Sep 2026
+                            </strong>
+                        </p>
+
+                        <div class="order-actions">
+
+                            <button
+                                type="button"
+                                class="buy-again-btn"
+                            >
+                                Buy Again
+                            </button>
+
+                            <button
+                                type="button"
+                                class="review-order-btn"
+                            >
+                                Write Review
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= EMPTY ORDERS ================= -->
+
+                <div
+                    id="emptyOrders"
+                    class="empty-orders"
+                    style="display: none;"
+                >
+
+                    <div class="empty-orders-icon">
+                        📦
+                    </div>
+
+                    <h2>
+                        No Orders Found
+                    </h2>
+
+                    <p>
+                        You haven't placed any orders yet.
+                    </p>
+
+                    <a
+                        href="products.html"
+                        class="shop-now-btn"
+                    >
+                        Start Shopping
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-section">
+
+                <h3>
+                    ShopEase
+                </h3>
+
+                <p>
+                    Your simple online shopping destination.
+                </p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 ShopEase. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/orders.js"></script>
+
+</body>
+
+</html>

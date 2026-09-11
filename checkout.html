@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - ShopEase</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="../index.html">
+                ShopEase
+            </a>
+        </div>
+
+        <nav class="navbar">
+
+            <a href="../index.html">Home</a>
+
+            <a href="products.html">Products</a>
+
+            <a href="cart.html">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="orders.html">My Orders</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="ai-mode.html">AI Mode</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= CHECKOUT PAGE ================= -->
+
+    <main class="checkout-page">
+
+        <div class="checkout-container">
+
+            <!-- Page Header -->
+
+            <div class="checkout-header">
+
+                <h1>
+                    Checkout
+                </h1>
+
+                <p>
+                    Complete your order
+                </p>
+
+            </div>
+
+
+            <!-- Checkout Steps -->
+
+            <div class="checkout-steps">
+
+                <div class="step completed">
+
+                    <span>✓</span>
+
+                    <p>
+                        Cart
+                    </p>
+
+                </div>
+
+                <div class="step active">
+
+                    <span>2</span>
+
+                    <p>
+                        Checkout
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <span>3</span>
+
+                    <p>
+                        Payment
+                    </p>
+
+                </div>
+
+                <div class="step">
+
+                    <span>4</span>
+
+                    <p>
+                        Confirmation
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="checkout-content">
+
+
+                <!-- ================= LEFT SECTION ================= -->
+
+                <div class="checkout-left">
+
+
+                    <!-- Delivery Address -->
+
+                    <section class="checkout-card">
+
+                        <div class="card-header">
+
+                            <h2>
+                                📍 Delivery Address
+                            </h2>
+
+                            <button
+                                type="button"
+                                id="addAddressBtn"
+                                class="small-btn"
+                            >
+                                + Add New
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            id="addressList"
+                            class="address-list"
+                        >
+
+                            <label class="address-option">
+
+                                <input
+                                    type="radio"
+                                    name="address"
+                                    value="home"
+                                    checked
+                                >
+
+                                <div class="address-content">
+
+                                    <div class="address-title">
+
+                                        <strong>
+                                            Home
+                                        </strong>
+
+                                        <span>
+                                            Default
+                                        </span>
+
+                                    </div>
+
+                                    <p>
+                                        User Name
+                                    </p>
+
+                                    <p>
+                                        123, Main Street, Hyderabad
+                                    </p>
+
+                                    <p>
+                                        Telangana - 500001
+                                    </p>
+
+                                    <p>
+                                        Phone: Not added
+                                    </p>
+
+                                </div>
+
+                            </label>
+
+
+                            <label class="address-option">
+
+                                <input
+                                    type="radio"
+                                    name="address"
+                                    value="work"
+                                >
+
+                                <div class="address-content">
+
+                                    <div class="address-title">
+
+                                        <strong>
+                                            Work
+                                        </strong>
+
+                                    </div>
+
+                                    <p>
+                                        User Name
+                                    </p>
+
+                                    <p>
+                                        Office Address
+                                    </p>
+
+                                    <p>
+                                        Hyderabad, Telangana
+                                    </p>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Add Address Form -->
+
+                        <div
+                            id="newAddressForm"
+                            class="new-address-form"
+                            style="display: none;"
+                        >
+
+                            <h3>
+                                Add New Address
+                            </h3>
+
+                            <div class="form-group">
+
+                                <label for="addressName">
+                                    Address Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="addressName"
+                                    placeholder="Home / Work"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="fullName">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    placeholder="Enter full name"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="addressLine">
+                                    Address
+                                </label>
+
+                                <textarea
+                                    id="addressLine"
+                                    rows="3"
+                                    placeholder="House number, street, area"
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="city">
+                                        City
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        placeholder="City"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="state">
+                                        State
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="state"
+                                        placeholder="State"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="pincode">
+                                        PIN Code
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="pincode"
+                                        placeholder="PIN Code"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="phone">
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        placeholder="Phone number"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+                                <button
+                                    type="button"
+                                    id="saveAddressBtn"
+                                    class="save-btn"
+                                >
+                                    Save Address
+                                </button>
+
+                                <button
+                                    type="button"
+                                    id="cancelAddressBtn"
+                                    class="cancel-btn"
+                                >
+                                    Cancel
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= ORDER ITEMS ================= -->
+
+                    <section class="checkout-card">
+
+                        <div class="card-header">
+
+                            <h2>
+                                🛒 Your Items
+                            </h2>
+
+                            <a href="cart.html">
+                                Edit Cart
+                            </a>
+
+                        </div>
+
+
+                        <div
+                            id="checkoutItems"
+                            class="checkout-items"
+                        >
+
+                            <!-- Product 1 -->
+
+                            <div class="checkout-item">
+
+                                <div class="checkout-item-image">
+                                    📱
+                                </div>
+
+                                <div class="checkout-item-info">
+
+                                    <h3>
+                                        Premium Smartphone
+                                    </h3>
+
+                                    <p>
+                                        128GB Storage
+                                    </p>
+
+                                    <p>
+                                        Quantity: 1
+                                    </p>
+
+                                </div>
+
+                                <strong>
+                                    ₹29,999
+                                </strong>
+
+                            </div>
+
+
+                            <!-- Product 2 -->
+
+                            <div class="checkout-item">
+
+                                <div class="checkout-item-image">
+                                    🎧
+                                </div>
+
+                                <div class="checkout-item-info">
+
+                                    <h3>
+                                        Wireless Headphones
+                                    </h3>
+
+                                    <p>
+                                        Bluetooth Headphones
+                                    </p>
+
+                                    <p>
+                                        Quantity: 1
+                                    </p>
+
+                                </div>
+
+                                <strong>
+                                    ₹2,999
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ================= DELIVERY ================= -->
+
+                    <section class="checkout-card">
+
+                        <div class="card-header">
+
+                            <h2>
+                                🚚 Delivery Method
+                            </h2>
+
+                        </div>
+
+
+                        <div class="delivery-options">
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="delivery"
+                                    value="free"
+                                    checked
+                                >
+
+                                <div>
+
+                                    <strong>
+                                        Standard Delivery
+                                    </strong>
+
+                                    <p>
+                                        Delivery within 3-5 business days
+                                    </p>
+
+                                </div>
+
+                                <span>
+                                    FREE
+                                </span>
+
+                            </label>
+
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="delivery"
+                                    value="express"
+                                >
+
+                                <div>
+
+                                    <strong>
+                                        Express Delivery
+                                    </strong>
+
+                                    <p>
+                                        Delivery within 1-2 business days
+                                    </p>
+
+                                </div>
+
+                                <span>
+                                    ₹99
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- ================= RIGHT SECTION ================= -->
+
+                <aside class="checkout-right">
+
+                    <section class="order-summary">
+
+                        <h2>
+                            Order Summary
+                        </h2>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Items
+                            </span>
+
+                            <span id="itemsTotal">
+                                ₹32,998
+                            </span>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <span id="deliveryCharge">
+                                FREE
+                            </span>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Discount
+                            </span>
+
+                            <span class="discount">
+                                -₹1,000
+                            </span>
+
+                        </div>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <div class="summary-row total-row">
+
+                            <strong>
+                                Total
+                            </strong>
+
+                            <strong id="orderTotal">
+                                ₹31,998
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="continuePaymentBtn"
+                            class="continue-payment-btn"
+                        >
+                            Continue to Payment
+                        </button>
+
+
+                        <div class="secure-checkout">
+
+                            🔒 Secure Checkout
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Coupon -->
+
+                    <section class="coupon-card">
+
+                        <h3>
+                            Have a Coupon?
+                        </h3>
+
+                        <div class="coupon-form">
+
+                            <input
+                                type="text"
+                                id="couponCode"
+                                placeholder="Enter coupon code"
+                            >
+
+                            <button
+                                type="button"
+                                id="applyCouponBtn"
+                            >
+                                Apply
+                            </button>
+
+                        </div>
+
+                        <p
+                            id="couponMessage"
+                            class="coupon-message"
+                        ></p>
+
+                    </section>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-section">
+
+                <h3>
+                    ShopEase
+                </h3>
+
+                <p>
+                    Your simple online shopping destination.
+                </p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 ShopEase. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/checkout.js"></script>
+
+</body>
+
+</html>

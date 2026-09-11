@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - ShopEase</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="../index.html">
+                ShopEase
+            </a>
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for products..."
+            >
+
+            <button type="button" id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <nav class="navbar">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="orders.html">
+                My Orders
+            </a>
+
+            <a href="profile.html" class="active">
+                Profile
+            </a>
+
+            <a href="ai-mode.html">
+                AI Mode
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PROFILE PAGE ================= -->
+
+    <main class="profile-page">
+
+        <section class="profile-container">
+
+            <!-- Profile Header -->
+
+            <div class="profile-header">
+
+                <div class="profile-avatar">
+                    👤
+                </div>
+
+                <div class="profile-heading">
+
+                    <h1 id="profileName">
+                        User Name
+                    </h1>
+
+                    <p id="profileEmail">
+                        user@example.com
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="editProfileBtn"
+                    class="edit-profile-btn"
+                >
+                    Edit Profile
+                </button>
+
+            </div>
+
+
+            <!-- ================= PROFILE CONTENT ================= -->
+
+            <div class="profile-content">
+
+
+                <!-- Personal Information -->
+
+                <section class="profile-card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Personal Information
+                        </h2>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Full Name
+                            </span>
+
+                            <span
+                                class="detail-value"
+                                id="displayName"
+                            >
+                                User Name
+                            </span>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Email
+                            </span>
+
+                            <span
+                                class="detail-value"
+                                id="displayEmail"
+                            >
+                                user@example.com
+                            </span>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Phone
+                            </span>
+
+                            <span
+                                class="detail-value"
+                                id="displayPhone"
+                            >
+                                Not added
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Address -->
+
+                <section class="profile-card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Delivery Address
+                        </h2>
+
+                        <button
+                            type="button"
+                            id="addAddressBtn"
+                            class="small-btn"
+                        >
+                            + Add Address
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="addressContainer"
+                        class="address-container"
+                    >
+
+                        <div class="address-box">
+
+                            <span class="address-type">
+                                Home
+                            </span>
+
+                            <p id="displayAddress">
+                                No delivery address added yet.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="address-edit-btn"
+                            >
+                                Edit
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Account Options -->
+
+                <section class="profile-card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Account
+                        </h2>
+
+                    </div>
+
+
+                    <div class="profile-options">
+
+                        <a href="orders.html" class="profile-option">
+
+                            <span class="option-icon">
+                                📦
+                            </span>
+
+                            <div>
+                                <h3>
+                                    My Orders
+                                </h3>
+
+                                <p>
+                                    View your previous and current orders
+                                </p>
+                            </div>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="cart.html" class="profile-option">
+
+                            <span class="option-icon">
+                                🛒
+                            </span>
+
+                            <div>
+                                <h3>
+                                    My Cart
+                                </h3>
+
+                                <p>
+                                    View products saved in your cart
+                                </p>
+                            </div>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a href="ai-mode.html" class="profile-option">
+
+                            <span class="option-icon">
+                                🤖
+                            </span>
+
+                            <div>
+                                <h3>
+                                    AI Shopping Mode
+                                </h3>
+
+                                <p>
+                                    Get help finding products
+                                </p>
+                            </div>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <button
+                            type="button"
+                            id="logoutBtn"
+                            class="profile-option logout-option"
+                        >
+
+                            <span class="option-icon">
+                                🚪
+                            </span>
+
+                            <div>
+                                <h3>
+                                    Logout
+                                </h3>
+
+                                <p>
+                                    Sign out of your ShopEase account
+                                </p>
+                            </div>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Edit Profile Form -->
+
+                <section
+                    id="editProfileSection"
+                    class="profile-card edit-profile-section"
+                    style="display: none;"
+                >
+
+                    <div class="card-header">
+
+                        <h2>
+                            Edit Profile
+                        </h2>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+                        <div class="form-group">
+
+                            <label for="editName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editName"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="editEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="editEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="editPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="editPhone"
+                                placeholder="Enter your phone number"
+                            >
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="save-btn"
+                            >
+                                Save Changes
+                            </button>
+
+                            <button
+                                type="button"
+                                id="cancelEditBtn"
+                                class="cancel-btn"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- Add Address Form -->
+
+                <section
+                    id="addressFormSection"
+                    class="profile-card"
+                    style="display: none;"
+                >
+
+                    <div class="card-header">
+
+                        <h2>
+                            Add Delivery Address
+                        </h2>
+
+                    </div>
+
+
+                    <form id="addressForm">
+
+                        <div class="form-group">
+
+                            <label for="addressName">
+                                Address Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="addressName"
+                                placeholder="Home / Work"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="addressLine">
+                                Address
+                            </label>
+
+                            <textarea
+                                id="addressLine"
+                                placeholder="Enter your complete address"
+                                rows="4"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="city">
+                                    City
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="city"
+                                    placeholder="City"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="pincode">
+                                    PIN Code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="pincode"
+                                    placeholder="PIN Code"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="save-btn"
+                            >
+                                Save Address
+                            </button>
+
+                            <button
+                                type="button"
+                                id="cancelAddressBtn"
+                                class="cancel-btn"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-section">
+
+                <h3>
+                    ShopEase
+                </h3>
+
+                <p>
+                    Your simple online shopping destination.
+                </p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 ShopEase. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/profile.js"></script>
+
+</body>
+
+</html>

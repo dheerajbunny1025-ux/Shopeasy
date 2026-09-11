@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Mode - ShopEase</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ai-mode.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="../index.html">ShopEase</a>
+        </div>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for products..."
+            >
+
+            <button type="button" id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <nav class="navbar">
+
+            <a href="../index.html">Home</a>
+
+            <a href="products.html">Products</a>
+
+            <a href="cart.html">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="orders.html">My Orders</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="ai-mode.html" class="active">AI Mode</a>
+
+            <a href="login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= AI MODE PAGE ================= -->
+
+    <main class="ai-page">
+
+        <div class="ai-container">
+
+            <!-- AI HEADER -->
+
+            <section class="ai-header">
+
+                <div class="ai-icon">
+                    🤖
+                </div>
+
+                <h1>
+                    ShopEase AI Assistant
+                </h1>
+
+                <p>
+                    Your personal shopping assistant
+                </p>
+
+                <div class="ai-status">
+                    <span></span>
+                    AI Assistant Online
+                </div>
+
+            </section>
+
+
+            <!-- CHAT BOX -->
+
+            <section class="ai-chat-container">
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages"
+                >
+
+                    <!-- Welcome Message -->
+
+                    <div class="chat-message ai-message">
+
+                        <div class="message-avatar">
+                            🤖
+                        </div>
+
+                        <div class="message-content">
+
+                            <div class="message-name">
+                                ShopEase AI
+                            </div>
+
+                            <p>
+                                Hello! 👋 Welcome to ShopEase AI.
+                            </p>
+
+                            <p>
+                                I can help you find products, compare products,
+                                understand specifications, and choose products
+                                according to your budget.
+                            </p>
+
+                            <p>
+                                What are you looking for today?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK QUESTIONS -->
+
+                <div class="quick-questions">
+
+                    <button
+                        type="button"
+                        class="quick-question"
+                        data-question="Suggest a good phone"
+                    >
+                        📱 Good Phone
+                    </button>
+
+                    <button
+                        type="button"
+                        class="quick-question"
+                        data-question="Suggest a laptop for students"
+                    >
+                        💻 Student Laptop
+                    </button>
+
+                    <button
+                        type="button"
+                        class="quick-question"
+                        data-question="Suggest useful accessories"
+                    >
+                        🎧 Accessories
+                    </button>
+
+                    <button
+                        type="button"
+                        class="quick-question"
+                        data-question="Suggest some clothes"
+                    >
+                        👕 Clothes
+                    </button>
+
+                    <button
+                        type="button"
+                        class="quick-question"
+                        data-question="Help me find products under my budget"
+                    >
+                        💰 Budget Shopping
+                    </button>
+
+                </div>
+
+
+                <!-- CHAT INPUT -->
+
+                <div class="chat-input-container">
+
+                    <textarea
+                        id="chatInput"
+                        placeholder="Ask ShopEase AI..."
+                        rows="1"
+                    ></textarea>
+
+                    <button
+                        type="button"
+                        id="sendMessageBtn"
+                        class="send-message-btn"
+                    >
+                        ➤
+                    </button>
+
+                </div>
+
+
+                <div class="chat-actions">
+
+                    <button
+                        type="button"
+                        id="clearChatBtn"
+                    >
+                        🗑️ Clear Chat
+                    </button>
+
+                </div>
+
+
+                <p class="ai-disclaimer">
+                    AI suggestions are for shopping assistance only.
+                    Always verify product details before purchasing.
+                </p>
+
+            </section>
+
+
+            <!-- ================= AI FEATURES ================= -->
+
+            <section class="ai-features">
+
+                <h2>
+                    What Can AI Do?
+                </h2>
+
+                <div class="ai-feature-grid">
+
+                    <div class="ai-feature-card">
+
+                        <div class="feature-icon">
+                            🔍
+                        </div>
+
+                        <h3>
+                            Find Products
+                        </h3>
+
+                        <p>
+                            Describe what you need and get suitable product suggestions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-feature-card">
+
+                        <div class="feature-icon">
+                            ⚖️
+                        </div>
+
+                        <h3>
+                            Compare Products
+                        </h3>
+
+                        <p>
+                            Compare products based on price, features and specifications.
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-feature-card">
+
+                        <div class="feature-icon">
+                            💰
+                        </div>
+
+                        <h3>
+                            Budget Assistant
+                        </h3>
+
+                        <p>
+                            Find products that fit within your preferred budget.
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-feature-card">
+
+                        <div class="feature-icon">
+                            💡
+                        </div>
+
+                        <h3>
+                            Smart Suggestions
+                        </h3>
+
+                        <p>
+                            Get shopping suggestions based on your requirements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= POPULAR REQUESTS ================= -->
+
+            <section class="popular-requests">
+
+                <h2>
+                    Popular Requests
+                </h2>
+
+                <div class="request-grid">
+
+                    <button
+                        type="button"
+                        class="request-card"
+                        data-question="Which phone is best for photography?"
+                    >
+                        <span>📸</span>
+                        <strong>Best phone for photography</strong>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="request-card"
+                        data-question="Which laptop is good for programming?"
+                    >
+                        <span>👨‍💻</span>
+                        <strong>Laptop for programming</strong>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="request-card"
+                        data-question="What accessories should I buy with a new phone?"
+                    >
+                        <span>🎧</span>
+                        <strong>Phone accessories</strong>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="request-card"
+                        data-question="Suggest comfortable clothes for daily use"
+                    >
+                        <span>👕</span>
+                        <strong>Daily wear clothes</strong>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= AI MODE OPTIONS ================= -->
+
+            <section class="ai-settings">
+
+                <h2>
+                    AI Preferences
+                </h2>
+
+                <div class="ai-setting-list">
+
+                    <div class="ai-setting">
+
+                        <div>
+
+                            <h3>
+                                Shopping Recommendations
+                            </h3>
+
+                            <p>
+                                Get personalized product suggestions.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="recommendationToggle"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="ai-setting">
+
+                        <div>
+
+                            <h3>
+                                Budget Suggestions
+                            </h3>
+
+                            <p>
+                                Show products according to your budget.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="budgetToggle"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="ai-setting">
+
+                        <div>
+
+                            <h3>
+                                Product Comparisons
+                            </h3>
+
+                            <p>
+                                Allow AI to compare products for you.
+                            </p>
+
+                        </div>
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="comparisonToggle"
+                                checked
+                            >
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-section">
+
+                <h3>
+                    ShopEase
+                </h3>
+
+                <p>
+                    Your simple online shopping destination.
+                </p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>
+                    Account
+                </h3>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 ShopEase. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/ai-mode.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,440 @@
+/* ================= PROFILE.CSS ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* ================= PROFILE PAGE ================= */
+
+.profile-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.profile-page h1 {
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 30px;
+}
+
+
+/* ================= PROFILE LAYOUT ================= */
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* ================= PROFILE SIDEBAR ================= */
+
+.profile-sidebar {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.profile-sidebar h2 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.profile-sidebar p {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+/* ================= PROFILE MENU ================= */
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    text-align: left;
+}
+
+.profile-menu a,
+.profile-menu button {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.profile-menu a:hover,
+.profile-menu a.active {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.profile-menu button:hover {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+
+/* ================= PROFILE CONTENT ================= */
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.profile-card h2 {
+    color: #111827;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ================= FORM ================= */
+
+.profile-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #111827;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ================= READ ONLY FIELD ================= */
+
+.form-group input[readonly] {
+    background: #f9fafb;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* ================= UPDATE BUTTON ================= */
+
+.update-profile-btn,
+#updateProfileBtn {
+    min-height: 46px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.update-profile-btn:hover,
+#updateProfileBtn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ================= STATS ================= */
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.profile-stat {
+    padding: 18px;
+    border-radius: 9px;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.profile-stat-number {
+    display: block;
+    margin-bottom: 5px;
+    color: #2563eb;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-stat-label {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* ================= ADDRESS ================= */
+
+.address-list {
+    display: grid;
+    gap: 12px;
+}
+
+.address-card {
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.address-card h3 {
+    color: #111827;
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.address-card p {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.address-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.address-actions button {
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.address-actions button.delete {
+    color: #dc2626;
+}
+
+
+/* ================= DANGER ZONE ================= */
+
+.danger-zone {
+    border: 1px solid #fecaca;
+}
+
+.danger-zone h2 {
+    color: #dc2626;
+}
+
+.delete-account-btn,
+#deleteAccountBtn {
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid #dc2626;
+    border-radius: 7px;
+    background: #fff;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete-account-btn:hover,
+#deleteAccountBtn:hover {
+    background: #fef2f2;
+}
+
+
+/* ================= LOGOUT ================= */
+
+.logout-btn,
+#logoutBtn {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid #dc2626;
+    border-radius: 7px;
+    background: #fff;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logout-btn:hover,
+#logoutBtn:hover {
+    background: #fef2f2;
+}
+
+
+/* ================= SUCCESS MESSAGE ================= */
+
+.profile-success {
+    display: none;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #a7f3d0;
+    border-radius: 7px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+}
+
+.profile-success.show {
+    display: block;
+}
+
+
+/* ================= ERROR MESSAGE ================= */
+
+.profile-error {
+    display: none;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #fecaca;
+    border-radius: 7px;
+    background: #fef2f2;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.profile-error.show {
+    display: block;
+}
+
+
+/* ================= CART COUNT ================= */
+
+.cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 50%;
+    background: #ef4444;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-sidebar {
+        text-align: center;
+    }
+
+    .profile-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .profile-page {
+        padding: 25px 12px;
+    }
+
+    .profile-page h1 {
+        font-size: 26px;
+    }
+
+    .profile-card,
+    .profile-sidebar {
+        padding: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-menu {
+        grid-template-columns: 1fr;
+    }
+
+}
